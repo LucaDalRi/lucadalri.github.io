@@ -111,7 +111,6 @@
 p {
   font-size: 2.2rem;
   line-height: 3.2rem;
-  letter-spacing: 0.05em;
   margin: 0 0 60px;
   padding: 0 10px; /* padding laterale ridotto */
 }

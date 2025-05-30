@@ -1,8 +1,8 @@
 <template>
   <span id="langSpan">
-    <button @click="changeLang(true)" class="langBtn">DE</button>
+    <button :class="isDeutsch ?  'underlined': null" @click="changeLang(true)" class="langBtn">DE</button>
     /
-    <button @click="changeLang(false)" class="langBtn">IT</button>
+    <button :class="!isDeutsch ?  'underlined': null" @click="changeLang(false)" class="langBtn">IT</button>
   </span>
   <div id="header-container">
     <img class="flower-top" src="../assets/illustration_1.jpg" draggable="false" alt="Flower Top">
@@ -58,7 +58,7 @@ h1 {
 }
 
 .flower-top {
-  padding-top: 300px;
+  padding-top: calc(300px - 42px);
 }
 
 .flower-bottom {
@@ -71,11 +71,16 @@ h1 {
   background-color: transparent;
 }
 
+.underlined{
+  text-decoration: underline;
+}
+
 #langSpan {
   padding: 10px 10px 0 0 ;
   display: flex;
   justify-content: end;
   width: 100%;
+  font-size: 2rem;
 }
 
 </style>
