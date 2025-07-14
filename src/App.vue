@@ -1,6 +1,6 @@
 <script setup>
 import Header from './components/Header.vue'
-import Main from './components/Main.vue'
+// import Main from './components/Main.vue'
 </script>
 
 <template>
@@ -8,9 +8,9 @@ import Main from './components/Main.vue'
       <Header
       @changeLang="($event) => { isDeutsch = $event}"
       />
-      <Main
+      <!-- <Main
       :is-Deutsch="isDeutsch"
-      />
+      /> -->
     </div>
 </template>
 
@@ -26,6 +26,7 @@ export default {
 
 <style>
 .wrapper {
+  height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

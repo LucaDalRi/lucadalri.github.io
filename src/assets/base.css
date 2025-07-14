@@ -48,7 +48,11 @@ body {
   min-height: 100vh;
   width: 100vw;
   color: var(--color-text);
-  background: var(--color-background);
+  background-image: url('tessitura-bianco.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -62,3 +66,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: "MoonTime";
+  src: url("https://db.onlinewebfonts.com/t/657bc16f9d9e1138aedc238e69ff1983.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/657bc16f9d9e1138aedc238e69ff1983.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/657bc16f9d9e1138aedc238e69ff1983.ttf") format("truetype");
+}
+

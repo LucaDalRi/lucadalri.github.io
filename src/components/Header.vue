@@ -5,13 +5,12 @@
     <button :class="!isDeutsch ?  'underlined': null" @click="changeLang(false)" class="langBtn">IT</button>
   </span>
   <div id="header-container">
-    <img class="flower-top" src="../assets/illustration_1.jpg" draggable="false" alt="Flower Top">
-    <h1>
-      <span>ELI</span>
-      <span>&middot;</span>
-      <span>PHI</span>
-    </h1>
-    <img class="flower-bottom" src="../assets/illustration_2.jpg" draggable="false" alt="Flower Bottom">
+    <p style="font-size: 6rem;">Elisa</p>
+    <p> &hearts;</p>
+    <p style="font-size: 6rem;">Philipp</p>
+    <img class="decorazione" src="../assets/image.svg" >
+    <p style="font-size: 4rem;">Save the date</p>
+    <p style="font-size: 4rem;">20 06 2026</p>
   </div>
 </template>
 
@@ -39,30 +38,69 @@ export default {
 
 <style scoped>
 #header-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
+  position: relative;
+  width: 100vw;
   height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+
+  background-image: url("../assets/sfondo-fiori1.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 2rem;
 }
 
-h1 {
-  letter-spacing: 0.2rem;
-  font-size: 3rem;
+#header-container p {
+  margin: 0;
+  font-size: 2rem;
+  font-family: "MoonTime", cursive;
+  color: var(--color-text);
 }
 
-.flower-top, .flower-bottom .flower-top, .flower-bottom { 
-  object-fit: contain;
-  width: 90%;
+
+#header-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
 }
 
-.flower-top {
-  padding-top: calc(300px - 42px);
+.decorazione {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 120px;
+  display: block;
+  margin-bottom: 2.8rem;
+  scale: 2.8;
+  filter: saturate(0.8);
 }
 
-.flower-bottom {
-  padding-bottom: 300px;
+
+
+#header-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+#langSpan {
+  padding: 10px 10px 0 0;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
 }
 
 .langBtn {
@@ -71,16 +109,9 @@ h1 {
   background-color: transparent;
 }
 
-.underlined{
+.underlined {
   text-decoration: underline;
 }
 
-#langSpan {
-  padding: 10px 10px 0 0 ;
-  display: flex;
-  justify-content: end;
-  width: 100%;
-  font-size: 2rem;
-}
 
 </style>
