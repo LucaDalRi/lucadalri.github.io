@@ -1,45 +1,35 @@
 <template>
-  <span id="langSpan">
-    <button :class="isDeutsch ?  'underlined': null" @click="changeLang(true)" class="langBtn">DE</button>
-    /
-    <button :class="!isDeutsch ?  'underlined': null" @click="changeLang(false)" class="langBtn">IT</button>
-  </span>
   <div id="header-container">
-    <p style="font-size: 6rem;">Elisa</p>
-    <p> &hearts;</p>
-    <p style="font-size: 6rem;">Philipp</p>
-    <img class="decorazione" src="../assets/image.svg" >
-    <p style="font-size: 4rem;">Save the date</p>
-    <p style="font-size: 4rem;">20 06 2026</p>
+    <p style="font-size: 5rem">Elisa</p>
+    <img style="height: 50px" src="../assets/heart.png" />
+    <p style="font-size: 5rem">Philipp</p>
+    <img class="decorazione" src="../assets/image.svg" />
+    <p style="font-size: 2.5rem">Save the date!</p>
+    <p style="font-size: 2.5rem; display: flex; align-items: center">
+      20
+      <span style="font-size: 1rem; padding-inline: 0.6rem"> • </span>
+      06
+      <span style="font-size: 1rem; padding-inline: 0.6rem"> • </span>
+      2026
+    </p>
+    <p style="font-size: 2.5rem; padding: 1rem 0">Weitere Informationen folgen in Kürze</p>
+    <p style="font-size: 2.5rem">Bleiben Sie dran!</p>
   </div>
 </template>
 
 <script>
 export default {
-  emits: ['changeLang'],
   data() {
-    return {
-      isDeutsch: true,
-    }
+    return {}
   },
-  methods: {
-    changeLang(deutsch) {
-      console.log(deutsch)
-      if (deutsch) {
-        this.isDeutsch = true
-      } else {
-        this.isDeutsch = false
-      }
-      this.$emit('changeLang', this.isDeutsch)
-    }
-  },
+  methods: {},
 }
 </script>
 
 <style scoped>
 #header-container {
   position: relative;
-  width: 100vw;
+  width: 100dvw;
   height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -47,26 +37,25 @@ export default {
   justify-content: center;
   text-align: center;
 
-  background-image: url("../assets/sfondo-fiori1.svg");
+  background-image: url('../assets/sfondo-fiori1.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1.4rem;
 }
 
 #header-container p {
   margin: 0;
   font-size: 2rem;
-  font-family: "MoonTime", cursive;
   color: var(--color-text);
+  text-transform: none;
 }
 
-
 #header-container::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0.5);
@@ -83,8 +72,6 @@ export default {
   scale: 2.8;
   filter: saturate(0.8);
 }
-
-
 
 #header-container > * {
   position: relative;
@@ -112,6 +99,4 @@ export default {
 .underlined {
   text-decoration: underline;
 }
-
-
 </style>
