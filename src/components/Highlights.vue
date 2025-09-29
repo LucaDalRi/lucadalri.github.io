@@ -1,54 +1,21 @@
 <template>
   <div id="main-container">
-    <img style="height: 50px" src="../assets/heart.png" />
-    <h1>Highlights</h1>
-    <div style="width: 100px; padding-top: 50px">
-      <div class="point" style="top: 10px">
-        <div style="left: 30px; position: absolute; width: 160px; border: 2px solid red">
-          <span>11 uhr trauung</span>
-          <img style="height: 50px" src="../assets/chiesa-icon.png" />
-          <p>
-            <span>Kirche Frangart (Eppan)</span>
-            <img style="height: 50px" src="../assets/hands-icon.png" />
-          </p>
+    <div class="title">
+      <img class="heart" src="../assets/heart.png" />
+      <h1>Highlights</h1>
+    </div>
+
+    <div id="timeline">
+      <div class="vertical-line"></div>
+
+      <div class="step" v-for="(item, index) in steps" :key="index">
+        <div class="point"></div>
+        <img v-if="item.icon" :src="item.icon" class="step-icon" />
+        <div class="step-content">
+          <span class="step-text">{{ item.time }}</span>
+          <span class="step-text" v-if="item.text">{{ item.text }}</span>
         </div>
       </div>
-      <div class="point" style="top: 110px">
-        <div style="right: 60px; width: 140px; position: absolute; border: 2px solid red">
-          <span>14 Uhr aufbrauch</span>
-          <img style="height: 50px" src="../assets/wedding-car.png" />
-          <span>Ansitz zimmerlehen, Vols am schlern</span>
-        </div>
-      </div>
-      <div class="point" style="top: 210px">
-        <div style="left: 65px; width: 140px; position: absolute; border: 2px solid red">
-          <span>16 uhr aperitivo</span>
-          <img style="height: 50px" src="../assets/aperitivo-icon.png" />
-        </div>
-      </div>
-      <div class="point" style="top: 310px">
-        <div style="right: 60px; width: 140px; position: absolute; border: 2px solid red">
-          <span>18 uhr essen</span>
-          <img style="height: 50px" src="../assets/dish-icon.png" />
-        </div>
-      </div>
-      <div class="point" style="top: 410px">
-        <div style="left: 75px; width: 140px; position: absolute; border: 2px solid red">
-          <span>21:30 uhr party</span>
-          <img style="height: 50px" src="../assets/dance-icon.png" />
-        </div>
-      </div>
-      <div class="point" style="top: 510px">
-        <div style="right: 60px; width: 160px; position: absolute; border: 2px solid red">
-          <span>Gemeinsam ausklingen lessen</span>
-          <img style="height: 50px" src="../assets/married-icon.png" />
-        </div>
-      </div>
-      <div id="vertical-line"></div>
-      <div class="horizontal-line" style="top: -582px"></div>
-      <div class="horizontal-line" style="left: 48px; top: -466px"></div>
-      <div class="horizontal-line" style="top: -350px"></div>
-      <div class="horizontal-line" style="left: 48px; top: -234px"></div>
     </div>
   </div>
 </template>
@@ -56,46 +23,112 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      steps: [
+        {
+          time: '11 Uhr Trauung',
+          icon: new URL('../assets/chiesa-icon.png', import.meta.url).href,
+          text: 'Kirche Frangart (Eppan)',
+        },
+        {
+          time: '14 Uhr Aufbrauch',
+          icon: new URL('../assets/wedding-car.png', import.meta.url).href,
+          text: 'Ansitz Zimmerlehen, Völs am Schlern',
+        },
+        {
+          time: '16 Uhr Aperitivo',
+          icon: new URL('../assets/aperitivo-icon.png', import.meta.url).href,
+        },
+        {
+          time: '18 Uhr Essen',
+          icon: new URL('../assets/dish-icon.png', import.meta.url).href,
+        },
+        {
+          time: '21:30 Uhr Party',
+          icon: new URL('../assets/dance-icon.png', import.meta.url).href,
+        },
+        {
+          time: 'Gemeinsam ausklingen lassen',
+          icon: new URL('../assets/married-icon.png', import.meta.url).href,
+        },
+      ],
+    }
   },
 }
 </script>
 
 <style scoped>
 #main-container {
+  background: rgba(255, 255, 255, 0.5);
   width: 100dvw;
   height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.heart {
+  height: 50px;
+}
+
+#timeline {
+  position: relative;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10px;
+}
+
+.vertical-line {
+  position: absolute;
+  left: 18px;
+  top: 20px;
+  bottom: 0;
+  width: 4px;
+  background-color: #9d7b7b;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 85px;
 }
 
 .point {
   width: 20px;
   height: 20px;
-  background-color: black;
+  background-color: #9d7b7b;
   border-radius: 50%;
-  position: relative;
-  left: 40px;
+  margin-right: 10px;
+  z-index: 1;
 }
 
-#vertical-line {
-  position: relative;
-  top: -100px;
-  width: 4px;
-  height: 600px;
-  background-color: black;
-  margin: 0 auto;
+.step:last-child {
+  margin-bottom: 0;
 }
 
-.horizontal-line {
-  position: relative;
-  width: 60px;
-  height: 4px;
-  background-color: black;
-  position: relative;
-  border-radius: 50px;
+.step-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.step-text {
+  font-size: 1.6rem;
 }
 </style>

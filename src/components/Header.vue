@@ -41,10 +41,26 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
   overflow: hidden;
-  box-sizing: border-box;
   padding: 1.4rem;
+  box-sizing: border-box;
+}
+
+#header-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+#header-container > * {
+  position: relative;
+  z-index: 3;
 }
 
 #header-container p {
@@ -76,27 +92,5 @@ export default {
 #header-container > * {
   position: relative;
   z-index: 2;
-}
-
-#langSpan {
-  padding: 10px 10px 0 0;
-  display: flex;
-  justify-content: end;
-  width: 100%;
-  font-size: 2rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 3;
-}
-
-.langBtn {
-  color: inherit;
-  border: none;
-  background-color: transparent;
-}
-
-.underlined {
-  text-decoration: underline;
 }
 </style>
