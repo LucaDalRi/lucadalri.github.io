@@ -7,10 +7,14 @@ import Footer from './components/Footer.vue'
 
 <template>
   <div class="wrapper">
-    <Header />
-    <Main />
-    <Highlights />
-    <Footer />
+    <div class="content">
+      <Header />
+      <Main />
+      <Highlights />
+      <Footer />
+    </div>
+
+    <div id="landscape-warning">Drehen Sie Ihr Telefon vertikal, um fortzufahren 😊</div>
   </div>
 </template>
 
@@ -19,14 +23,38 @@ import Footer from './components/Footer.vue'
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   height: 100dvh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
+  position: relative;
 }
 
-.wrapper > * {
+.wrapper > .content > * {
   scroll-snap-align: start;
+}
+
+#landscape-warning {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  padding: 20px;
+  z-index: 1000;
+}
+
+@media screen and (orientation: landscape) {
+  .content {
+    display: none;
+  }
+
+  #landscape-warning {
+    display: flex;
+  }
 }
 </style>
