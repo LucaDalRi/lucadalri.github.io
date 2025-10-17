@@ -4,7 +4,7 @@
     <img style="height: 70px" src="../assets/heart.png" />
     <p style="font-size: 7rem">Philipp</p>
     <img class="decorazione" src="../assets/image.svg" />
-    <span style="font-size: 2rem; font-weight: 300; display: flex; align-items: center">
+    <span style="font-size: 2rem; font-weight: 400; display: flex; align-items: center">
       20
       <span style="font-size: 1rem; padding-inline: 0.6rem"> • </span>
       06
@@ -33,7 +33,7 @@ export default {
   align-items: center;
   justify-content: center;
   text-align: center;
-
+  background: rgba(255, 255, 255, 0.284);
   background-image: url('../assets/sfondo-fiori1.svg');
   background-size: cover;
   background-position: center;
@@ -41,17 +41,6 @@ export default {
   overflow: hidden;
   padding: 1.4rem;
   box-sizing: border-box;
-}
-
-#header-container::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  pointer-events: none;
 }
 
 #header-container > * {
@@ -75,7 +64,7 @@ export default {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.284);
   z-index: 1;
 }
 

@@ -12,7 +12,6 @@
         <img src="../assets/map-icon.png" class="map-icon" />
       </a>
     </p>
-    <div class="bottom-fade"></div>
   </div>
 </template>
 
@@ -35,33 +34,21 @@ export default {
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
+  background-image: url('../assets/sfondo-fiori1.svg');
+  background-size: cover;
+  background-position: 30%;
+  background-repeat: no-repeat;
 }
 
-#main-container::before {
+#main-container::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background-image: url('../assets/sfondo-fiori1.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: rotate(180deg);
-  z-index: 1;
-  pointer-events: none;
-  filter: brightness(1.2);
-}
-
-#main-container .bottom-fade {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-  background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 2;
+  height: 60px;
+  background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 99;
   pointer-events: none;
 }
 

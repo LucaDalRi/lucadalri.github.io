@@ -89,7 +89,7 @@ export default {
   bottom: 0;
   z-index: 1;
   pointer-events: none;
-  filter: brightness(1.2);
+  filter: brightness(1.1);
   height: 80px;
   background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
 }
@@ -100,9 +100,9 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 60px;
   background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 2;
+  z-index: 99;
   pointer-events: none;
 }
 
