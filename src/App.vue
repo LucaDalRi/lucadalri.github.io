@@ -2,6 +2,7 @@
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Highlights from './components/Highlights.vue'
+// import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -9,25 +10,23 @@ import Highlights from './components/Highlights.vue'
     <Header />
     <Main />
     <Highlights />
+    <!-- <Footer /> -->
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {}
-  },
-}
-</script>
 
 <style>
 .wrapper {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.wrapper > * {
+  scroll-snap-align: start;
 }
 </style>

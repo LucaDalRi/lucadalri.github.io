@@ -1,10 +1,12 @@
 <template>
   <div id="main-container">
-    <p>Schion dasses di gib!</p>
-    <p>Mir freind ins wenn es enk, am 20.06.2026 zeit nemmb mit ins, insre hockzeit zu ferien!</p>
-    <p>olles startet un 11 uhr in do kirche von frongort (Eppan)!</p>
-    <p>gfeiert werd in völs am schlern!</p>
-    <p>Geb ins bitte bis 30. april 2026 bescheid obas dobei seid!</p>
+    <p id="elegant">Schion dasses enk gib!</p>
+    <img src="../assets/eliphil1.jpeg" style="height: 150px; border-radius: 10%" />
+    <p>Mir freidn ins wenn es enk am 20.06.2026 zeit nemmb mit ins, insere hochzeit zu feiern.</p>
+    <img src="../assets/eliphil2.jpg" style="height: 150px; border-radius: 10%" />
+    <p>Olls startet um 11:00 Uhr in do kirche von Frongort (Eppan).</p>
+    <!-- <p>Gfeiert werd in völs am schlern!</p>
+    <p>Geb ins bitte bis 30. April 2026 bescheid obas dobei seid!</p> -->
     <div class="bottom-fade"></div>
   </div>
 </template>
@@ -26,9 +28,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
-  overflow: hidden;
 }
 
 #main-container::before {
@@ -54,7 +55,7 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 80px;
   background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 2;
   pointer-events: none;
@@ -76,10 +77,21 @@ export default {
   z-index: 3;
 }
 
-p {
-  font-size: 2.4rem;
-  line-height: 3rem;
-  margin: 0 0 40px;
+#elegant {
+  font-family: 'MoonTime', cursive;
+  font-size: 3.6rem;
+  margin: 0;
   padding: 0 20px;
+}
+
+p {
+  padding: 0 10px;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+}
+
+img {
+  margin: 10px 0;
 }
 </style>

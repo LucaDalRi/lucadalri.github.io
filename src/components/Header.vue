@@ -1,19 +1,18 @@
 <template>
   <div id="header-container">
-    <p style="font-size: 5rem">Elisa</p>
-    <img style="height: 50px" src="../assets/heart.png" />
-    <p style="font-size: 5rem">Philipp</p>
+    <p style="font-size: 7rem">Elisa</p>
+    <img style="height: 70px" src="../assets/heart.png" />
+    <p style="font-size: 7rem">Philipp</p>
     <img class="decorazione" src="../assets/image.svg" />
-    <p style="font-size: 2.5rem">Save the date!</p>
-    <p style="font-size: 2.5rem; display: flex; align-items: center">
+    <span style="font-size: 2rem; font-weight: 300">Save the date!</span>
+    <span style="font-size: 2rem; font-weight: 300; display: flex; align-items: center">
       20
       <span style="font-size: 1rem; padding-inline: 0.6rem"> • </span>
       06
       <span style="font-size: 1rem; padding-inline: 0.6rem"> • </span>
       2026
-    </p>
-    <p style="font-size: 2.5rem; padding: 1rem 0">Weitere Informationen folgen in Kürze</p>
-    <p style="font-size: 2.5rem">Bleiben Sie dran!</p>
+    </span>
+    <span style="font-size: 2rem; font-weight: 300">Weitere Informationen folgen in Kürze!</span>
   </div>
 </template>
 
@@ -68,6 +67,11 @@ export default {
   font-size: 2rem;
   color: var(--color-text);
   text-transform: none;
+  font-family: 'MoonTime', cursive;
+}
+
+#header-container span {
+  padding: 8px 0;
 }
 
 #header-container::before {
