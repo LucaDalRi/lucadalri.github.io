@@ -15,10 +15,7 @@
     </svg>
 
     <!-- IMMAGINE -->
-    <img
-      src="../assets/eliphil2.jpg"
-      style="height: 300px; border-radius: 10%; margin-top: -150px"
-    />
+    <img src="../assets/eliphil2.jpg" id="footer-image" />
   </div>
 </template>
 
@@ -65,5 +62,16 @@ export default {}
   background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 99;
   pointer-events: none;
+}
+#footer-image {
+  height: 300px;
+  border-radius: 10%;
+  margin-top: -150px;
+}
+
+@media (min-width: 769px) {
+  #footer-image {
+    height: 500px;
+  }
 }
 </style>

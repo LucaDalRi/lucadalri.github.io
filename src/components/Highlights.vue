@@ -126,7 +126,6 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 600px;
   padding: 0 20px;
   flex: 1;
   justify-content: space-between;
@@ -239,6 +238,12 @@ export default {
   .map-icon {
     width: 35px;
     height: 35px;
+  }
+}
+
+@media (min-width: 769px) {
+  #timeline {
+    width: 21%;
   }
 }
 

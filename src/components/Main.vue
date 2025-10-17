@@ -1,7 +1,7 @@
 <template>
   <div id="main-container">
     <p>Mir freidn ins wenn es enk am 20.06.2026 zeit nemmb mit ins, insere hochzeit zu feiern.</p>
-    <img src="../assets/eliphil1.jpeg" style="height: 300px; border-radius: 10%" class="main-img" />
+    <img src="../assets/eliphil1.jpeg" class="main-img" />
     <p>
       Olls startet um 11:00 Uhr in do kirche von
       <a
@@ -73,5 +73,13 @@ p {
 
 .main-img {
   box-shadow: 0 0 40px 10px rgb(151, 174, 195);
+  height: 300px;
+  border-radius: 10%;
+}
+
+@media (min-width: 769px) {
+  .main-img {
+    height: 500px;
+  }
 }
 </style>
