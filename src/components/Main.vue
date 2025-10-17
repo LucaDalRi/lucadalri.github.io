@@ -1,12 +1,17 @@
 <template>
   <div id="main-container">
-    <p id="elegant">Schion dasses enk gib!</p>
-    <img src="../assets/eliphil1.jpeg" style="height: 150px; border-radius: 10%" />
     <p>Mir freidn ins wenn es enk am 20.06.2026 zeit nemmb mit ins, insere hochzeit zu feiern.</p>
-    <img src="../assets/eliphil2.jpg" style="height: 150px; border-radius: 10%" />
-    <p>Olls startet um 11:00 Uhr in do kirche von Frongort (Eppan).</p>
-    <!-- <p>Gfeiert werd in völs am schlern!</p>
-    <p>Geb ins bitte bis 30. April 2026 bescheid obas dobei seid!</p> -->
+    <img src="../assets/eliphil1.jpeg" style="height: 300px; border-radius: 10%" class="main-img" />
+    <p>
+      Olls startet um 11:00 Uhr in do kirche von
+      <a
+        style="color: inherit; text-decoration: none"
+        href="https://maps.app.goo.gl/R8JoJ2DxKHTKkvAR6"
+      >
+        Frongort (Eppan)
+        <img src="../assets/map-icon.png" class="map-icon" />
+      </a>
+    </p>
     <div class="bottom-fade"></div>
   </div>
 </template>
@@ -49,18 +54,6 @@ export default {
   filter: brightness(1.2);
 }
 
-#main-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 2;
-  pointer-events: none;
-}
-
 #main-container .bottom-fade {
   position: absolute;
   left: 0;
@@ -77,13 +70,6 @@ export default {
   z-index: 3;
 }
 
-#elegant {
-  font-family: 'MoonTime', cursive;
-  font-size: 3.6rem;
-  margin: 0;
-  padding: 0 20px;
-}
-
 p {
   padding: 0 10px;
   font-size: 2rem;
@@ -91,7 +77,14 @@ p {
   line-height: 2.4rem;
 }
 
-img {
-  margin: 10px 0;
+.map-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  vertical-align: bottom;
+}
+
+.main-img {
+  box-shadow: 0 0 40px 10px rgb(151, 174, 195);
 }
 </style>

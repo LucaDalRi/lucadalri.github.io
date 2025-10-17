@@ -4,7 +4,6 @@
     <img style="height: 70px" src="../assets/heart.png" />
     <p style="font-size: 7rem">Philipp</p>
     <img class="decorazione" src="../assets/image.svg" />
-    <span style="font-size: 2rem; font-weight: 300">Save the date!</span>
     <span style="font-size: 2rem; font-weight: 300; display: flex; align-items: center">
       20
       <span style="font-size: 1rem; padding-inline: 0.6rem"> • </span>
@@ -12,7 +11,6 @@
       <span style="font-size: 1rem; padding-inline: 0.6rem"> • </span>
       2026
     </span>
-    <span style="font-size: 2rem; font-weight: 300">Weitere Informationen folgen in Kürze!</span>
   </div>
 </template>
 
@@ -53,7 +51,6 @@ export default {
   bottom: 0;
   height: 50px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  z-index: 2;
   pointer-events: none;
 }
 

@@ -1,10 +1,24 @@
 <template>
   <div id="footer-container">
-    <img src="../assets/eliphil1.jpg" class="footer-img top" />
-    <p class="footer-text">Mir freidn ins!</p>
-    <img src="../assets/heart.png" class="small-heart" />
-    <p class="footer-text names">Elisa & Philipp</p>
-    <img src="../assets/eliphil2.jpg" class="footer-img bottom" />
+    <!-- TESTO CURVATO -->
+    <svg width="400" height="150" viewBox="0 0 400 150">
+      <defs>
+        <!-- controlla qui la curvatura modificando "A" (raggio e angolo) -->
+        <path id="semicurve" d="M 50,120 A 150,80 0 0,1 350,120" fill="none" />
+      </defs>
+
+      <text font-size="60" font-family="MoonTime, cursive" fill="var(--color-text)">
+        <textPath href="#semicurve" startOffset="50%" text-anchor="middle">
+          Schion dasses enk gib!
+        </textPath>
+      </text>
+    </svg>
+
+    <!-- IMMAGINE -->
+    <img
+      src="../assets/eliphil2.jpg"
+      style="height: 300px; border-radius: 10%; margin-top: -150px"
+    />
   </div>
 </template>
 
@@ -17,7 +31,6 @@ export default {}
   position: relative;
   width: 100dvw;
   height: 100dvh;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -48,35 +61,5 @@ export default {}
   background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 2;
   pointer-events: none;
-}
-
-.footer-img {
-  width: 50%;
-  height: 50%;
-  z-index: 1;
-}
-
-.footer-img.top {
-  margin-bottom: 10px;
-}
-
-.footer-img.bottom {
-  margin-top: 10px;
-}
-
-.footer-text {
-  font-size: 2.4rem;
-  margin: 5px 0;
-  z-index: 3;
-}
-
-.footer-text.names {
-  margin: 10px 0;
-}
-
-.small-heart {
-  height: 50px;
-  margin: 5px 0;
-  z-index: 3;
 }
 </style>

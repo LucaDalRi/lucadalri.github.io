@@ -2,7 +2,7 @@
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Highlights from './components/Highlights.vue'
-// import Footer from './components/Footer.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import Highlights from './components/Highlights.vue'
     <Header />
     <Main />
     <Highlights />
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
