@@ -36,7 +36,7 @@ export default {
           time: '11:00 Uhr Trauung',
           icon: new URL('../assets/chiesa-icon.png', import.meta.url).href,
           text: 'Kirche Frangart (Eppan)',
-          a: 'https://maps.app.goo.gl/R8JoJ2DxKHTKkvAR6',
+          a: 'https://maps.app.goo.gl/prHhXoXT8vaw1Bxj9',
           mapIcon: new URL('../assets/map-icon.png', import.meta.url).href,
         },
         {
@@ -47,6 +47,9 @@ export default {
         {
           time: '16:00 Uhr Aperitivo',
           icon: new URL('../assets/aperitivo-icon.png', import.meta.url).href,
+          a: 'https://maps.app.goo.gl/chiJpyrFc9eu9YRo9',
+          mapIcon: new URL('../assets/map-icon.png', import.meta.url).href,
+          text: "Agriturismo Zimmerlehen (Fie' allo Sciliar)",
         },
         {
           time: '18:00 Uhr Essen',
@@ -69,7 +72,7 @@ export default {
 <style scoped>
 #main-container {
   background: rgba(255, 255, 255, 0.5);
-  min-height: 100dvh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +81,9 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   overflow-x: hidden;
+  background-position: 60%;
   padding-bottom: 20px;
+  position: relative;
 }
 
 #main-container::before {
@@ -90,7 +95,7 @@ export default {
   z-index: 1;
   pointer-events: none;
   filter: brightness(1.1);
-  height: 80px;
+  height: 150px;
   background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
 }
 
@@ -102,11 +107,10 @@ export default {
   right: 0;
   height: 60px;
   background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 99;
+  z-index: 1;
   pointer-events: none;
 }
 
-/* titolo */
 .title {
   display: flex;
   flex-direction: column;
@@ -120,7 +124,6 @@ export default {
   height: 50px;
 }
 
-/* timeline */
 #timeline {
   position: relative;
   display: flex;
@@ -131,60 +134,46 @@ export default {
   justify-content: space-between;
 }
 
-/* linea verticale assoluta - calcolata dal primo all'ultimo punto */
 .timeline-line {
   position: absolute;
-  left: 29px; /* 20px padding + 10px (metà del punto) */
-  top: 15px; /* allineata al centro del primo punto */
-  height: calc(100% - 50px); /* altezza totale meno i margini top/bottom */
+  left: 29px;
+  top: 25px;
+  height: calc(100% - 50px);
   width: 3px;
   background-color: #9d7b7b;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
 }
 
-/* step */
 .step {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
   z-index: 1;
   min-height: 60px;
 }
 
-/* wrapper per punto */
 .point-wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
   margin-right: 15px;
   padding-top: 5px;
 }
 
-/* punto */
 .point {
   width: 20px;
   height: 20px;
   background-color: #9d7b7b;
   border-radius: 50%;
-  flex-shrink: 0;
-  z-index: 2;
-  position: relative;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8); /* border bianco per staccare dalla linea */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8);
 }
 
-/* icona */
 .step-icon {
   height: 60px;
   width: 60px;
   margin-right: 15px;
   object-fit: contain;
-  flex-shrink: 0;
+  filter: brightness(0.9) contrast(180%) drop-shadow(0 0 0.2px black);
 }
 
-/* contenuto */
 .step-content {
   display: flex;
   flex-direction: column;
@@ -224,7 +213,6 @@ export default {
   text-decoration: none;
 }
 
-/* Responsive adjustments */
 @media (max-width: 375px) {
   .step-text {
     font-size: 1.4rem;
@@ -247,7 +235,6 @@ export default {
   }
 }
 
-/* Fix per Safari - assicura che flex: 1 funzioni correttamente */
 @supports (-webkit-touch-callout: none) {
   #timeline {
     -webkit-box-flex: 1;

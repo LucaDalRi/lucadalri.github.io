@@ -67,6 +67,7 @@ export default {}
   height: 300px;
   border-radius: 10%;
   margin-top: -150px;
+  box-shadow: 0 0 40px 10px rgb(151, 174, 195);
 }
 
 @media (min-width: 769px) {

@@ -6,7 +6,7 @@
       Olls startet um 11:00 Uhr in do kirche von
       <a
         style="color: inherit; text-decoration: none"
-        href="https://maps.app.goo.gl/R8JoJ2DxKHTKkvAR6"
+        href="https://maps.app.goo.gl/prHhXoXT8vaw1Bxj9"
       >
         Frongort (Eppan)
         <img src="../assets/map-icon.png" class="map-icon" />
@@ -36,8 +36,10 @@ export default {
   text-align: center;
   background-image: url('../assets/sfondo-fiori1.svg');
   background-size: cover;
-  background-position: 30%;
+  background-position: 27%;
   background-repeat: no-repeat;
+  padding: 40px 0;
+  position: relative;
 }
 
 #main-container::after {
@@ -52,6 +54,19 @@ export default {
   pointer-events: none;
 }
 
+#main-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  filter: brightness(1.1);
+  height: 60px;
+  background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 #main-container > * {
   position: relative;
   z-index: 3;
@@ -59,7 +74,7 @@ export default {
 
 p {
   padding: 0 10px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 300;
   line-height: 2.4rem;
 }
@@ -73,8 +88,8 @@ p {
 
 .main-img {
   box-shadow: 0 0 40px 10px rgb(151, 174, 195);
-  height: 300px;
   border-radius: 10%;
+  height: 250px;
 }
 
 @media (min-width: 769px) {

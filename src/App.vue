@@ -48,7 +48,7 @@ import Footer from './components/Footer.vue'
   z-index: 1000;
 }
 
-@media screen and (orientation: landscape) {
+@media (max-width: 769px) and (orientation: landscape) {
   .content {
     display: none;
   }
