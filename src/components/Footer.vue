@@ -1,21 +1,9 @@
 <template>
   <div id="footer-container">
-    <!-- TESTO CURVATO -->
-    <svg width="400" height="150" viewBox="0 0 400 150">
-      <defs>
-        <!-- controlla qui la curvatura modificando "A" (raggio e angolo) -->
-        <path id="semicurve" d="M 50,120 A 150,80 0 0,1 350,120" fill="none" />
-      </defs>
-
-      <text font-size="60" font-family="MoonTime, cursive" fill="var(--color-text)">
-        <textPath href="#semicurve" startOffset="50%" text-anchor="middle">
-          Schion dasses enk gib!
-        </textPath>
-      </text>
-    </svg>
-
-    <!-- IMMAGINE -->
-    <img src="../assets/eliphil2.jpg" id="footer-image" />
+    <div>
+      <img src="../assets/eliphil2.jpg" id="footer-image" />
+      <p>mir freindn ins wennas enk Zeit nemmb</p>
+    </div>
   </div>
 </template>
 
@@ -29,11 +17,10 @@ export default {}
   position: relative;
   width: 100dvw;
   height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url('../assets/sfondo-fiori1.svg');
   background-size: cover;
   background-position: center;
@@ -64,10 +51,17 @@ export default {}
   pointer-events: none;
 }
 #footer-image {
-  height: 300px;
+  height: 350px;
   border-radius: 10%;
   margin-top: -150px;
   box-shadow: 0 0 40px 10px rgb(151, 174, 195);
+}
+
+p {
+  margin: 80px 10px -80px 10px;
+  font-size: 3.8rem;
+  color: var(--color-text);
+  font-family: 'MoonTime', cursive;
 }
 
 @media (min-width: 769px) {

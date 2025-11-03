@@ -10,7 +10,10 @@
         <div class="point-wrapper">
           <div class="point"></div>
         </div>
-        <img v-if="item.icon" :src="item.icon" class="step-icon" />
+        <a v-if="item.mapIcon" :href="item.a" class="map-link">
+          <img v-if="item.icon" :src="item.icon" class="step-icon" />
+        </a>
+        <img v-if="item.icon && !item.a" :src="item.icon" class="step-icon" />
         <div class="step-content">
           <div class="step-header">
             <span class="step-text">{{ item.time }}</span>
@@ -40,7 +43,7 @@ export default {
           mapIcon: new URL('../assets/map-icon.png', import.meta.url).href,
         },
         {
-          time: '14:00 Uhr Aufbrauch',
+          time: '14:00 Uhr Aufbruch',
           icon: new URL('../assets/wedding-car.png', import.meta.url).href,
           text: 'Ansitz Zimmerlehen, Völs am Schlern',
         },
@@ -231,7 +234,7 @@ export default {
 
 @media (min-width: 769px) {
   #timeline {
-    width: 21%;
+    width: 30%;
   }
 }
 

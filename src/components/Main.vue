@@ -1,9 +1,9 @@
 <template>
   <div id="main-container">
-    <p>Mir freidn ins wenn es enk am 20.06.2026 zeit nemmb mit ins, insere hochzeit zu feiern.</p>
+    <p>Mir freidn ins wenn es enk am 20.06.2026 Zeit nemmb mit ins, insere Hochzeit zu feiern.</p>
     <img src="../assets/eliphil1.jpeg" class="main-img" />
     <p>
-      Olls startet um 11:00 Uhr in do kirche von
+      Olls startet um 11:00 Uhr in do Kirche von
       <a
         style="color: inherit; text-decoration: none"
         href="https://maps.app.goo.gl/prHhXoXT8vaw1Bxj9"
@@ -95,6 +95,10 @@ p {
 @media (min-width: 769px) {
   .main-img {
     height: 500px;
+  }
+
+  #main-container {
+    padding: 120px 0;
   }
 }
 </style>
