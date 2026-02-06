@@ -2,6 +2,7 @@
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Highlights from './components/Highlights.vue'
+import Hotels from './components/Hotels.vue'
 import Footer from './components/Footer.vue'
 </script>
 
@@ -11,6 +12,7 @@ import Footer from './components/Footer.vue'
       <Header />
       <Main />
       <Highlights />
+      <Hotels />
       <Footer />
     </div>
 
